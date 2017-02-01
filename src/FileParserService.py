@@ -32,6 +32,7 @@ class FileParserService(object):
                 similar_record.append(row)
                 previous_record_id = row[0]
                 count_record += 1
+            self.manager.pushRecords(similar_record)
         print "Records Processed ", count_record
         print "Entity Processed ", entity_count
         return self.manager.flushBatch()

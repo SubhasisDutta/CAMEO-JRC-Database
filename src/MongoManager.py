@@ -17,7 +17,7 @@ class MongoManager(object):
         self.password = ""  # password to connect to database
         self.schema = "JRC-Names"  # database
         self.resultTable = "Entities"  # collection
-        self.batchSize = 100  # This is the no of documents to be pushed in one go
+        self.batchSize = 1000  # This is the no of documents to be pushed in one go
         self.port = 27017  # Port to connect to database
         cluster_nodes = []
         cluster_nodes.append('localhost')
@@ -61,6 +61,7 @@ class MongoManager(object):
         return True
 
     def flushBatch(self):
+        print "Flushed"
         self.collection.insert_many(self.insert_batch)
         self.batch_count = 0
         self.insert_batch = []
