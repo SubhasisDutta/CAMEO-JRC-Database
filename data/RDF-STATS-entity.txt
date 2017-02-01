@@ -1,0 +1,29 @@
+LEXICAL DATA:
+	Number of languages with stat occurrence metadata: 23
+	Total number of languages (Number of lemon lexicons): 170
+	Number of entries in lemon lexicons: 1703304
+	Number of lemon lexical entries: 1781901
+		 - with 1666237 name variants
+		 - with 115664 titles
+
+SEMANTIC/ONTO LEVELS:
+	Number of lemon senses: 1781901
+	Number of RDF entities created: 338633
+		 - with 331242 PERS
+		 - with 7391 ORG
+
+RELATIONS:
+	Nb of translation relations between multilingual name variants (lemon senses): 32564928
+	Nb of lexical variant relations between monolingual name variants (lemon lexical entries): 2412394
+
+INTERLINKING:
+	Dbpedia links on entities (total): 95721
+	Dbpedia links on entities (strict): 64199
+	Dbpedia links on entities (with disamb on type): 31427
+	Dbpedia links on entities (with disamb on title): 95
+	Dbpedia non disambiguated: 242912
+	MLODE back links on entities: 231154
+	New York Times links on entities: 2706
+	MEP - Talk Of Europe links on entities: 928
+
+TOTAL NUMBER OF TRIPLES: 72586712

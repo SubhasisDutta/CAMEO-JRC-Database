@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+<!ENTITY dcterms "http://purl.org/dc/terms/">
+]>
+
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#hasTitle">
+    <rdfs:range rdf:resource="http://data.europa.eu/euodp/jrc-names#Occurrence"/>
+    <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
+    <rdfs:comment>Denotes expressions or trigger words, most of the time title or function names, that have been historically found next to the person mention.</rdfs:comment>
+    <rdfs:label xml:lang="IT">Ha titolo</rdfs:label>
+    <rdfs:label xml:lang="FR">A pour titre</rdfs:label>
+    <rdfs:label xml:lang="EN">Has title</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#isOccurrenceOf">
+    <rdfs:range rdf:resource="http://www.lemon-model.net/lemon#LexicalSense"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/euodp/jrc-names#Occurrence"/>
+    <rdfs:comment>Denotes the relation between the occurrence of a title and a lexical sense.</rdfs:comment>
+    <rdfs:label xml:lang="IT">E occurrenza di</rdfs:label>
+    <rdfs:label xml:lang="FR">Est occurrence de</rdfs:label>
+    <rdfs:label xml:lang="EN">Is occurrence of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#isTitleOf">
+    <rdfs:domain rdf:resource="http://data.europa.eu/euodp/jrc-names#Occurrence"/>
+    <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
+    <rdfs:label xml:lang="EN">is title of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#priorMono">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdfs:domain rdf:resource="http://www.lemon-model.net/lemon#LexicalSense"/>
+    <rdfs:comment xml:lang="en">Prior probability of the variant according to monolingual setting.</rdfs:comment>
+    <rdfs:label xml:lang="it">Monolinguale distribuzione a priori.</rdfs:label>
+    <rdfs:label xml:lang="fr">Probabilité monolingue.</rdfs:label>
+    <rdfs:label xml:lang="en">Prior probability.</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#ISLRNNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">International Standard Language Resource Number</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#insertionDate">
+    <rdfs:seeAlso rdf:resource="http://data.nytimes.com/elements/first_use"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="http://www.lemon-model.net/lemon#LexicalSense"/>
+    <rdfs:comment>Date by which the unit has been inserted for the first time in the JRC database. i.e. the first time the unit has been recognized in a processed article within the EMM pipeline.</rdfs:comment>
+    <rdfs:label xml:lang="fr">Date d'insertion</rdfs:label>
+    <rdfs:label xml:lang="en">Insertion Date</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#hasOccurrence">
+    <rdfs:range rdf:resource="http://data.europa.eu/euodp/jrc-names#Occurrence"/>
+    <rdfs:domain rdf:resource="http://www.lemon-model.net/lemon#LexicalSense"/>
+    <rdfs:comment>Denotes the relation between a lexical sense and one of its occurrence.</rdfs:comment>
+    <rdfs:label xml:lang="IT">Ha occurrenza</rdfs:label>
+    <rdfs:label xml:lang="FR">A pour occurrence</rdfs:label>
+    <rdfs:label xml:lang="EN">Has occurrence</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#countVariant">
+    <rdfs:range rdf:datatype="java:com.hp.hpl.jena.rdf.model.impl.ResourceImpl">http://www.w3.org/2001/XMLSchema#double</rdfs:range>
+    <rdfs:comment>Number of name variants relative to an entity.</rdfs:comment>
+    <rdfs:label xml:lang="fr">Nombre de variantes</rdfs:label>
+    <rdfs:label xml:lang="en">Number of variants</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#clusterFreq">
+    <rdfs:seeAlso rdf:resource="http://data.nytimes.com/elements/associated_article_count"/>
+    <rdfs:seeAlso rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#frequency"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://www.lemon-model.net/lemon#LexicalSense"/>
+    <rdfs:comment>Number of time the lexical unit has been seen in a cluster of news documents, such as extracted and gathered by the Europe Media Monitor (http://emm.newsbrief.eu/overview.html).</rdfs:comment>
+    <rdfs:label xml:lang="fr">Fréquence cluster</rdfs:label>
+    <rdfs:label xml:lang="en">Cluster frequency</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#priorMulti">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdfs:domain rdf:resource="http://www.lemon-model.net/lemon#LexicalSense"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Prior probability of the variant according to multilingual setting.</rdfs:comment>
+    <rdfs:label xml:lang="IT">Multilinguale distribuzione a priori.</rdfs:label>
+    <rdfs:label xml:lang="FR">Probabilité multilingue.</rdfs:label>
+    <rdfs:label xml:lang="EN">Prior probability (multilingue).</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#hasId">
+    <rdfs:comment>The unique identifier of the entity in the JRC-names database.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="fr">Identifiant unique.</rdfs:label>
+    <rdfs:label xml:lang="en">Unique identifier.</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#lastUpdate">
+    <rdfs:seeAlso rdf:resource="http://data.nytimes.com/elements/latest_use"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="http://www.lemon-model.net/lemon#LexicalSense"/>
+    <rdfs:comment>Date by which the unit has been updated for the last time in the JRC database, i.e. the last time the unit has been matched in a processed article within the EMM pipeline.</rdfs:comment>
+    <rdfs:label xml:lang="fr">Date de mise à jour</rdfs:label>
+    <rdfs:label xml:lang="en">Update date</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#ISLRN">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:comment>ISLRN is a new, unique and universal identification schema for Language Resources which provides Language Resources with unique names using a standardized nomenclature.</rdfs:comment>
+    <rdfs:label xml:lang="en">Web page of JRC-Names resource in the ISLRN repository.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/euodp/jrc-names#Occurrence">
+    <rdfs:comment>This class represents the association between a title expression and a person entity. Such an expression corresponds to titles and function names that have been historically found next to the person mentions.</rdfs:comment>
+    <rdfs:label xml:lang="EN">Title Occurrence</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>
