@@ -1,0 +1,12 @@
+#Configuration for Access Attributes
+[MongoDBConnection]
+db.host=localhost
+db.port=27017
+db.username=
+db.password=
+db.batch_limit=1000
+db.schema=Political_Actors
+
+[JRCNames]
+JRCNames.entityfile=../data/entities/entities
+db.JRCNames=JRC_Names

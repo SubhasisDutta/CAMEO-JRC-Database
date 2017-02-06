@@ -7,14 +7,14 @@ import csv
 from MongoManager import MongoManager
 
 
-class FileParserService(object):
+class JRCFileParserService(object):
     '''
     This class takes care of reading the input file parsing the text line by line and pushing it into MongoDB.
     '''
 
-    def __init__(self, file_path):
+    def __init__(self, file_path, db_config, schema, table, batch_size):
         self.file_path = file_path
-        self.manager = MongoManager()
+        self.manager = MongoManager(schema, table, batch_size, db_config)
 
     def process(self):
         print "Reading File ", self.file_path
