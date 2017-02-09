@@ -51,7 +51,7 @@ class CAMEOFileParserService(object):
                         for d in data_list:
                             if len(d) > 0:
                                 entity_list.append(d)
-                    elif k == 'Cameo.Phoenix.International.actors':
+                    elif k == 'Cameo.Phoenix.International.actors' or k == 'Cameo.Phoenix.MilNonState.actors':
                         record = row.rstrip('\n')
                         if len(record) > 2 and record[0] != '+':
                             if record[0] == '\t': #ignore tab lines
@@ -66,8 +66,8 @@ class CAMEOFileParserService(object):
                         for d in data_list:
                             if len(d) > 0:
                                 entity_list.append(d)
-                    elif k == 'Cameo.Phoenix.MilNonState.actors':
-                        pass
+                    # elif k == 'Cameo.Phoenix.MilNonState.actors':
+                    #     pass
                 print "Lines Processed for ", k, " is : ", count_record
                 print "Records created for ", k, " is : ", entity_count
         return self.manager.flushBatch()
@@ -109,7 +109,14 @@ class CAMEOFileParserService(object):
                 if val[0] == '[' and val[-1] == ']':
                     actor_period.append(val)
             d['cameo_country_actors'] = country_actors
-        elif type == 'Cameo.Phoenix.International.actors':
+        elif type == 'Cameo.Phoenix.International.actors' or type == 'Cameo.Phoenix.MilNonState.actors':
+            # setup variation of country name
+            actor_name_variation = []
+            for data in data_list:
+                if data[0] == '+':
+                    data = data[1:]
+                    actor_name_variation.append(data)
+            d['cameo_actor_name_variation'] = actor_name_variation
             actor_orgs = []
             for data in data_list:
                 if len(data) > 2 and data[0] == '$':
