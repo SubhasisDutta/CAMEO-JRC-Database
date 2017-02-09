@@ -8,5 +8,12 @@ db.batch_limit=1000
 db.schema=Political_Actors
 
 [JRCNames]
-JRCNames.entityfile=../data/entities/entities
+JRCNames.entityfile=../data/jrc/entities
 db.JRCNames=JRC_Names
+
+[Cameo]
+Cameo.Phoenix.agents=../data/cameo/Phoenix.agents.txt
+Cameo.Phoenix.Countries.actors=../data/cameo/Phoenix.Countries.actors.txt
+Cameo.Phoenix.International.actors=../data/cameo/Phoenix.International.actors.txt
+Cameo.Phoenix.MilNonState.actors=../data/cameo/Phoenix.MilNonState.actors.txt
+db.Cameo=CAMEO_Data
