@@ -1,5 +1,5 @@
 # Political Name Parser for JRC and CAMEO dataset
-This repo contains script to parse the entity file of JRC names and put it in database.
+This repo contains script to parse the entity file of JRC names, CAMEO actoe data and puts organizes it in a structured format in database.
 
 
 ## Installation
