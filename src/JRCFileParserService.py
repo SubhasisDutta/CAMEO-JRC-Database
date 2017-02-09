@@ -46,10 +46,13 @@ class JRCFileParserService(object):
         if data_list[0][1] == 'O':
             d['type'] = 'ORGANIZATION'
         variations = []
+        compare_strings = []
         for r in data_list:
             v = {}
             v['lang'] = r[2]
             v['name'] = r[3]
             variations.append(v)
+            compare_strings.append(r[3].lower())
         d['variations'] = variations
+        d['compare_strings'] = compare_strings
         return d
