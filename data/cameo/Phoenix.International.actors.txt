@@ -18,8 +18,8 @@
 
 ######   The United Nations  #######
 THE_UNITED_NATIONS_ [IGOUNO]
-UN_ [IGOUNO]
-U.N._
++UN_ [IGOUNO]
++U.N._
 
 # Secretarys General
 UN_SECRETARY_GENERAL
