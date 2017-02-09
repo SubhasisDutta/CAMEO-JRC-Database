@@ -42,7 +42,7 @@ Cameo.Phoenix.MilNonState.actors=../data/cameo/Phoenix.MilNonState.actors.txt
 1. Setup the file location of config.cnf in JRCNames.entityfile attribute 
 2. Run
 ```
-python src\loadJRCData.py
+python src/loadJRCData.py
 ```
 
 Options:
@@ -61,7 +61,7 @@ optional arguments:
 1. Setup the Cameo file locations in config.cnf
 2. Run
 ```
-python loadCAMEOData.py
+python src/loadCAMEOData.py
 ```
 
 Options:
