@@ -55,3 +55,6 @@ class MongoManager(object):
     def drop_collection(self):
         self.collection.drop()
         print "Clean Up Complete"
+
+    def get_collection(self):
+        return self.collection

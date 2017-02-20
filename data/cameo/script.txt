@@ -1,1 +1,0 @@
-mongo localhost/Political_Actors -eval "printjson(db.getCollection('CAMEO_Data').find({'record_type':'Cameo.Phoenix.Countries.actors'}).toArray())" >> select.json

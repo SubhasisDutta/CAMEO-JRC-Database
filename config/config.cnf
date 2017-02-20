@@ -17,3 +17,6 @@ Cameo.Phoenix.Countries.actors=../data/cameo/Phoenix.Countries.actors.txt
 Cameo.Phoenix.International.actors=../data/cameo/Phoenix.International.actors.txt
 Cameo.Phoenix.MilNonState.actors=../data/cameo/Phoenix.MilNonState.actors.txt
 db.Cameo=CAMEO_Data
+
+[CameoJRC]
+db.CameoJRCCountryActor=CAMEO_JRC_Relation
