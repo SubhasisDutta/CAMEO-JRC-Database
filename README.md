@@ -1,6 +1,17 @@
 # Political Name Parser for JRC and CAMEO dataset
 This repo contains script to parse the entity file of JRC names, CAMEO actoe data and puts organizes it in a structured format in database.
 
+## CAMEO Data Set
+Conflict and Mediation Event Observations dataset obtained from https://github.com/openeventdata/Dictionaries
+
+Details about CAMEO: 
+ http://phoenixdata.org/description 
+ http://eventdata.parusanalytics.com/papers.dir/Gerner.APSA.02.pdf
+
+## JRC Dataset
+JRC-Names is a highly multilingual named entity resource for person and organisation names (called 'entities'). It consists of large lists of names and their many spelling variants (up to hundreds for a single person), including across scripts (Latin, Greek, Arabic, Cyrillic, Japanese, Chinese, etc.).
+
+https://ec.europa.eu/jrc/en/language-technologies/jrc-names
 
 ## Installation
 The scripts have dependency on PyMongo 
