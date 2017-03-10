@@ -1,0 +1,1 @@
+Contain script to Join CAMEO and JRC using Mapreduce / PIG.
