@@ -19,4 +19,4 @@ Cameo.Phoenix.MilNonState.actors=../data/cameo/Phoenix.MilNonState.actors.txt
 db.Cameo=CAMEO_Data
 
 [CameoJRC]
-db.CameoJRCCountryActor=CAMEO_JRC_Relation
+db.CameoJRCCountryActor=CAMEO_JRC_Relation_Actor_Edit_Distance1
