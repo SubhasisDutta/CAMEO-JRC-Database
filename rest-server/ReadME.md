@@ -22,3 +22,9 @@ http://lookup.dbpedia.org/api/search/KeywordSearch?QueryString=narendra+modi
 
 BableNet
 API key: 7914e95c-2716-4cce-bb47-bbdab5e43f57
+
+localhost:2121/search?query=donald trump
+
+localhost:2121/search?query=barrak obama
+
+localhost:2121/search?query=barak obama

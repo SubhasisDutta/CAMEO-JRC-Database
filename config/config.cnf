@@ -21,8 +21,12 @@ db.Cameo=CAMEO_Data
 [CameoJRC]
 db.CameoJRCCountryActor=CAMEO_JRC_Relation
 
+[BableNet]
+db.BableNet.Cache=BableNet_Cache
+access.key=7914e95c-2716-4cce-bb47-bbdab5e43f57
 
-
+[DBPedia]
+db.DBPedia.Cache=DBPedia_Cache
 
 #Logging
 [Logging]
