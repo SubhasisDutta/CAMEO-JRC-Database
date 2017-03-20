@@ -1,3 +1,19 @@
+#About this Project
+
+This project is built to code events about political conflict and cooperation among different political actors in multiple languages(primarily Engilsh, Arabic and Spanish).
+It is part of "Modernizing Political Event Data for Big Data Social Science Research".
+
+Implemented under the guidance of: 
+1. Prof. Patrick Brandt
+2. Prof. Latifur Khan
+3. Prof. Vincent Ng
+4. Prof. Jennifer Holmes
+
+Built at University of Texas at Dallas, funded by U.S National Science Foundation. 
+Details here: https://www.nsf.gov/awardsearch/showAward?AWD_ID=1539302&HistoricalAwards=false 
+
+
+
 # Political Name Parser for JRC and CAMEO dataset
 This repo contains script to parse the entity file of JRC names, CAMEO actoe data and puts organizes it in a structured format in database.
 
