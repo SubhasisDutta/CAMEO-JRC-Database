@@ -15,3 +15,10 @@ About BabelNet : https://en.wikipedia.org/wiki/BabelNet  .
 
 The data access limit is 1000 request per day. However they can increase the limit to 50000 request per day when we show them it is for research purpose from an institution.
 http://babelnet.org/guide#access 
+
+
+DBPedia
+http://lookup.dbpedia.org/api/search/KeywordSearch?QueryString=narendra+modi
+
+BableNet
+API key: 7914e95c-2716-4cce-bb47-bbdab5e43f57

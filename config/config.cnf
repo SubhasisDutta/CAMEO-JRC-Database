@@ -5,11 +5,11 @@ db.port=27017
 db.username=
 db.password=
 db.batch_limit=1000
-db.schema=Political_Actors
+db.schema=Political_Coding_DB
 
 [JRCNames]
 JRCNames.entityfile=../data/jrc/entities
-db.JRCNames=JRC_Names
+db.JRCNames=JRC_Data
 
 [Cameo]
 Cameo.Phoenix.agents=../data/cameo/Phoenix.agents.txt
@@ -19,4 +19,36 @@ Cameo.Phoenix.MilNonState.actors=../data/cameo/Phoenix.MilNonState.actors.txt
 db.Cameo=CAMEO_Data
 
 [CameoJRC]
-db.CameoJRCCountryActor=CAMEO_JRC_Relation_Actor_Edit_Distance1
+db.CameoJRCCountryActor=CAMEO_JRC_Relation
+
+
+
+
+#Logging
+[Logging]
+Logger.File=log/application.log
+Logger.Level=DEBUG
+# Level's Available : CRITICAL,ERROR,WARNING,INFO,DEBUG
+Logger.HomeMessage=Call made to Home
+Logger.GetMessage1=Call made to Search From :
+
+
+[ServerConnection]
+Server.Port=2121
+Server.Debug=True
+WebApp.title=MultiLang API
+Webservice.Search=search
+
+
+#General Message
+[GeneralMsg]
+Status.success=success
+Status.fail=fail
+Licence.Ack=Bla Bla licence
+
+[AccessParameters]
+Access.QueryString=query
+
+#Error Messages
+[ErrorMsg]
+ContentType.Unsupported=Bad Content Type
