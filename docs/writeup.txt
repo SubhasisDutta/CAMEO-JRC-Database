@@ -1,0 +1,46 @@
+				CS 6350 Project Spring 2017
+
+
+
+Topic Chosen:  Modernizing Political Event Data for Big Data Social Science Research
+
+Project Details : 
+
+
+The project mainly comprises of mining the worldwide news press articles to identify thegeographies that are sensitive to social unrest, agitations and campaigns. This is accomplished by working on multiple datasets to gather information on the various political actors regarding whom the society is alarmed and alerted.The motivaiton behind the project is to apply data resources and methods to help make data-driven decisions about foreign policy, civil war prevention, human rights policies, and the effects of other factors such as environmental or economic policies on these phenomena. The core of the project is to use data for the purposes of decision making  which is not constrained by the language.
+
+One of the main milestones of the implementation is to extract the different variants of the names of the political actors in mulitple languages. We collate this information  with the other avaliable data sources to extract credentials and thier political significance  I am studying about how to utilize the Naive Bayes approach to perform text classification for multi class problems. My project would mainly encompass achieving accurate language classification using Naive Bayes N-gram apporach.
+
+DataSets used:
+
+JRC, Wikipedia, Babelnet, Cameo
+
+Team Members:
+Subashish
+Chandrika
+Sneha Ramesh (snr150130)
+
+
+N-Gram:
+
+In the n-gram model, a token can be defined as a sequence of n items. The simplest case is the so-called unigram (1-gram) where each word consists of exactly one word, letter, or symbol. All previous examples were unigrams so far. Choosing the optimal number n depends on the language as well as the particular application. For example, Andelka Zecevic found in his study that n-grams with 3=n=73=n=7 were the best choice to determine authorship of Serbian text documents [10]. In a different study, the n-grams of size 4=n=84=n=8 yielded the highest accuracy in authorship determination of English text books 11] and Kanaris and others report that n-grams of size 3 and 4 yield good performances in anti-spam filtering of e-mail messages [12].
+
+
+One of the most important sub-tasks in pattern classification are feature extraction and selection; the three main criteria of good features are listed below:
+
+Salient. The features are important and meaningful with respect to the problem domain.
+Invariant. Invariance is often described in context of image classification: The features are insusceptible to distortion, scaling, orientation, etc. A nice example is given by C. Yao and others in Rotation-Invariant Features for Multi-Oriented Text Detection in Natural Images [7].
+Discriminatory. The selected features bear enough information to distinguish well between patterns when used to train the classifier.
+
+It is intuitive and essential to construct a feature matrix to get good results. We need to think about how to best represent a text document as a feature vectorWe need to identify two main types of features:
+Salient. The features are important and meaningful with respect to the problem domain.
+Discriminatory. The selected features bear enough information to distinguish well between patterns when used to train the classifier.
+
+Tokenization
+
+Tokenization describes the general process of breaking down a text corpus into individual elements that serve as input for various natural language processing algorithms. Usually, tokenization is accompanied by other optional processing steps, such as the removal of stop words and punctuation characters, stemming or lemmatizing, and the construction of n-grams. Below is an example of a simple but typical tokenization step that splits a sentence into individual words, removes punctuation, and converts all letters to lowercase.
+
+One strategy for dealing with continuous data in naive Bayes classification would be to discretize the features and form distinct categories or to use a Gaussian kernel to calculate the class-conditional probabilities. Under the assumption that the probability distributions of the features follow a normal (Gaussian) distribution. Text classification is a typical case of categorical data, however, naive Bayes can also be used on continuous data.
+Being an eager learner, naive Bayes classifiers are known to be relatively fast in classifying new instances. Eager learners are learning algorithms that learn a model from a training dataset as soon as the data becomes available. Once the model is learned, the training data does not have to be re-evaluated in order to make a new prediction. In case of eager learners, the computationally most expensive step is the model building step whereas the classification of new instances is relatively fast.
+
+A lot of work is done on Text Classification using N-gram approach in Python using the nltk library. 
