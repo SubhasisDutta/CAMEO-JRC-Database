@@ -70,4 +70,13 @@ if __name__ == '__main__':
         counter += len(jrc_compare_list)
     print "# of entities in JRC Data: ", counter
 
+    manager3 = MongoManager(schema, target_table, batch_size, db_config)
+    jrc_cameo = manager3.get_collection()
+    jrc_cameo_data = jrc_cameo.find({})
+    counter = 0
+    for jrc_record in jrc_cameo_data:
+        #jrc_compare_list = jrc_record['compare_strings']
+        counter += 1
+    print "# of entities in JRC CAMEO Relation Data: ", counter
+
     print ""
