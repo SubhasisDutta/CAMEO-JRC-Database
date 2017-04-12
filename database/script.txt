@@ -1,4 +1,0 @@
-mongo localhost/Political_Actors -eval "printjson(db.getCollection('CAMEO_Data').find({}).toArray())" >> CAMEO_Data.bson
-mongo localhost/Political_Actors -eval "printjson(db.getCollection('JRC_Names').find({}).toArray())" >> JRC_Names.bson
-mongo localhost/Political_Actors -eval "printjson(db.getCollection('CAMEO_JRC_Country_ActorRelation').find({}).toArray())" >> CAMEO_JRC_Country_ActorRelation.bson
-mongo localhost/Political_Actors -eval "printjson(db.getCollection('CAMEO_JRC_Relation').find({}).toArray())" >> CAMEO_JRC_Relation.bson
