@@ -1,5 +1,9 @@
 Python Tornado Script to launch a REST server to receive GET request and obtain the translation from database or get it from BABLENET.
 
+# DEMO Server
+http://35.160.238.107:2121/
+
+# Setup
 
 Example URL for Donald Trump: 
 http://babelnet.org/search?word=donald+trump&lang=EN&langTrans=AR&langTrans=ZH&langTrans=ES 
@@ -20,8 +24,7 @@ http://babelnet.org/guide#access
 DBPedia
 http://lookup.dbpedia.org/api/search/KeywordSearch?QueryString=narendra+modi
 
-BableNet
-API key: 7914e95c-2716-4cce-bb47-bbdab5e43f57
+
 
 localhost:2121/search?query=donald trump
 

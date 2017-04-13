@@ -78,3 +78,17 @@ Available API:
 
 Details to setup and run is present in [rest-server/ReadME](rest-server/)
 
+## webapp
+This package contains a User Interface Client to visualize the data that can be accessed by the API.
+<br/>
+Details present in [webappn/ReadME](webapp/)
+
+
+## Dependency
+The scripts have dependency on PyMongo(For database connection), Python Tornado(for API server), editdistance
+
+To install all dependency run
+```
+pip install -r requirements.txt
+```
+
