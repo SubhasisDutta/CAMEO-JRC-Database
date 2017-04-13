@@ -63,19 +63,20 @@ Details present in [jrc-classification/ReadME](jrc-classification/)
 
 ## rest-server
 Contains a web-server to allow different client systems to access the data from different client systems.
+<br/>
 Demo Server : http://35.160.238.107:2121/ 
 
 Available API:
-1. Check Status :
-    <Server IP:port>/ -  Should give a response
-    Response:
-    {"Status": "Server Running", "multilangAPI": "Welcome"}
+1. Check Status :<br/>
+    <Server IP:port>/ -  Should give a response<br/>
+    Response:<br/>
+    {"Status": "Server Running", "multilangAPI": "Welcome"}<br/>
     Ex - http://35.160.238.107:2121/
-2. Full Raw Output :
-    <Server IP:port>/search?query=<Person Name> - Returns all combined search resuls from CAMEO, JRC, BableNET and dbPedia.
-    Ex - http://35.160.238.107:2121/search?query=barrak+obama
+2. Full Raw Output :<br/>
+    <Server IP:port>/search?query=<Person Name> - Returns all combined search resuls from CAMEO, JRC, BableNET and dbPedia.<br/>
+    Ex - http://35.160.238.107:2121/search?query=barrak+obama<br/>
 3. Filtered Output:
-
+<br/>
 Details to setup and run is present in [rest-server/ReadME](rest-server/)
 
 ## webapp
