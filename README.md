@@ -39,7 +39,7 @@ http://babelnet.org/about
 # Project Modules
 
 ## ir-scripts
-This package contains all the scripts to :
+Contains all the scripts to :
 1. Extract information from CAMEO dataset and load it into MongoDB.
 2. Extract information from JRC Entity dataset and load it into MongoDB.
 3. Find all the relation between the CAMEO and JRC Actors and store it in a relation table.
@@ -61,5 +61,20 @@ This package will contain the Machine Learning based classifier to identify the 
 <br/>
 Details present in [jrc-classification/ReadME](jrc-classification/)
 
+## rest-server
+Contains a web-server to allow different client systems to access the data from different client systems.
+Demo Server : http://35.160.238.107:2121/ 
 
+Available API:
+1. Check Status :
+    <Server IP:port>/ -  Should give a response
+    Response:
+    {"Status": "Server Running", "multilangAPI": "Welcome"}
+    Ex - http://35.160.238.107:2121/
+2. Full Raw Output :
+    <Server IP:port>/search?query=<Person Name> - Returns all combined search resuls from CAMEO, JRC, BableNET and dbPedia.
+    Ex - http://35.160.238.107:2121/search?query=barrak+obama
+3. Filtered Output:
+
+Details to setup and run is present in [rest-server/ReadME](rest-server/)
 
