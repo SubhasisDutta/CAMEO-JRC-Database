@@ -43,8 +43,8 @@ This package contains all the scripts to :
 1. Extract information from CAMEO dataset and load it into MongoDB.
 2. Extract information from JRC Entity dataset and load it into MongoDB.
 3. Find all the relation between the CAMEO and JRC Actors and store it in a relation table.
-<br/> 
- Details to Run the Scripts are present in [ir-scripts/ReadME](ir-scripts/)
+<br/>
+Details to Run the Scripts are present in [ir-scripts/ReadME](ir-scripts/)
 
 ## mr-script
 This package will contain the Map reduce implementation of the join operation between CAMEO and JRC data.
