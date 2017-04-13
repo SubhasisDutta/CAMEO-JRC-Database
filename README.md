@@ -38,11 +38,22 @@ http://babelnet.org/about
 
 # Project Modules
 
-##ir-scripts
+## ir-scripts
 This package contains all the scripts to :
 1. Extract information from CAMEO dataset and load it into MongoDB.
 2. Extract information from JRC Entity dataset and load it into MongoDB.
 3. Find all the relation between the CAMEO and JRC Actors and store it in a relation table.
-Details to Sun the Scripts are present in [ir-scripts/ReadMe](ir-scripts/ReadMe.md) 
+Details to Run the Scripts are present in [ir-scripts/ReadMe](ir-scripts/ReadMe.md) 
+
+## mr-script
+This package will contain the Map reduce implementation of the join operation between CAMEO and JRC data.
+
+
+## spark-script
+This package will contain the Spark join implementation for the join operation between CAMEO and JRC data.
+
+## jrc-classification
+This package will contain the Machine Learning based classifier to identify the unidentified language for the different political Actors in JRC entity data set.
+
 
 
