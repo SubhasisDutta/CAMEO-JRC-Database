@@ -76,7 +76,7 @@ Available API:
     <Server IP:port>/search?query=<Person Name> - Returns all combined search resuls from CAMEO, JRC, BableNET and dbPedia.<br/>
     Ex - http://35.160.238.107:2121/search?query=barrak+obama<br/>
 3. Filtered Output:
-<br/>
+
 Details to setup and run is present in [rest-server/ReadME](rest-server/)
 
 ## webapp
