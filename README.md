@@ -43,22 +43,22 @@ This package contains all the scripts to :
 1. Extract information from CAMEO dataset and load it into MongoDB.
 2. Extract information from JRC Entity dataset and load it into MongoDB.
 3. Find all the relation between the CAMEO and JRC Actors and store it in a relation table.
- 
+<br/> 
  Details to Run the Scripts are present in [ir-scripts/ReadME](ir-scripts/)
 
 ## mr-script
 This package will contain the Map reduce implementation of the join operation between CAMEO and JRC data.
-
+<br/>
 Details present in [mr-script/ReadME](mr-script/)
 
 ## spark-script
 This package will contain the Spark join implementation for the join operation between CAMEO and JRC data.
-
+<br/>
 Details present in [spark-script/ReadME](spark-script/)
 
 ## jrc-classification
 This package will contain the Machine Learning based classifier to identify the unidentified language for the different political Actors in JRC entity data set.
-
+<br/>
 Details present in [jrc-classification/ReadME](jrc-classification/)
 
 
