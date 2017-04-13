@@ -29,77 +29,20 @@ JRC-Names is a highly multilingual named entity resource for person and organisa
 
 https://ec.europa.eu/jrc/en/language-technologies/jrc-names
 
-## Installation
-The scripts have dependency on PyMongo 
+## BableNet
+BabelNet is both a multilingual encyclopedic dictionary, with lexicographic and encyclopedic coverage of terms, 
+and a semantic network which connects concepts and named entities in a very large network of semantic relations, 
+made up of about 14 million entries, called Babel synsets. Each Babel synset represents a given meaning and contains
+all the synonyms which express that meaning in a range of different languages.
+http://babelnet.org/about 
 
-To install all dependency run
-```
-pip install -r requirements.txt
-```
+# Project Modules
 
-## To Execute the scripts
-
-Setup the config.cnf file inside config.cnf with required details
-```
-#Configuration for Access Attributes
-[MongoDBConnection]
-db.host=localhost
-db.port=27017
-db.username=
-db.password=
-db.batch_limit=1000
-db.schema=Political_Actors
-
-[JRCNames]
-JRCNames.entityfile=../data/jrc/entities
-db.JRCNames=JRC_Names
-
-[Cameo]
-Cameo.Phoenix.agents=../data/cameo/Phoenix.agents.txt
-Cameo.Phoenix.Countries.actors=../data/cameo/Phoenix.Countries.actors.txt
-Cameo.Phoenix.International.actors=../data/cameo/Phoenix.International.actors.txt
-Cameo.Phoenix.MilNonState.actors=../data/cameo/Phoenix.MilNonState.actors.txt
-```
+##ir-scripts
+This package contains all the scripts to :
+1. Extract information from CAMEO dataset and load it into MongoDB.
+2. Extract information from JRC Entity dataset and load it into MongoDB.
+3. Find all the relation between the CAMEO and JRC Actors and store it in a relation table.
+Details to Sun the Scripts are present in [ir-scripts/ReadMe](ir-scripts/ReadMe.md) 
 
 
-### Scripts to Run
-
-### Rebuild JRC Names Collection
-
-1. Setup the file location of config.cnf in JRCNames.entityfile attribute 
-2. Run
-```
-cd ir-scripts
-python loadJRCData.py
-```
-
-Options:
-```
-usage: loadJRCData.py [-h] [--config CONFIG]
-
-Script to process JRC data and push it into MongoDB collection.
-
-optional arguments:
-  -h, --help       show this help message and exit
-  --config CONFIG  Location of Config File (default: ../config/config.cnf)
-```
-
-### Rebuild CAMEO Data Collection
-
-1. Setup the Cameo file locations in config.cnf
-2. Run
-```
-cd ir-scripts
-python loadCAMEOData.py
-```
-
-Options:
-```
-usage: loadCAMEOData.py [-h] [--config CONFIG]
-
-Script to process CAMEO data and push it into MongoDB collection.
-
-optional arguments:
-  -h, --help       show this help message and exit
-  --config CONFIG  Location of Config File (default: ../config/config.cnf)
-```
