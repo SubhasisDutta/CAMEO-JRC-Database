@@ -10,12 +10,14 @@ db.schema=Political_Coding_DB
 [JRCNames]
 JRCNames.entityfile=../data/jrc/entities
 db.JRCNames=JRC_Data
+Jrc.CSV=../data/csv/jrc_data.csv
 
 [Cameo]
 Cameo.Phoenix.agents=../data/cameo/Phoenix.agents.txt
 Cameo.Phoenix.Countries.actors=../data/cameo/Phoenix.Countries.actors.txt
 Cameo.Phoenix.International.actors=../data/cameo/Phoenix.International.actors.txt
 Cameo.Phoenix.MilNonState.actors=../data/cameo/Phoenix.MilNonState.actors.txt
+Cameo.CSV=../data/csv/cameo_data.csv
 db.Cameo=CAMEO_Data
 
 [CameoJRC]
