@@ -73,3 +73,63 @@ optional arguments:
   -h, --help       show this help message and exit
   --config CONFIG  Location of Config File (default: ../config/config.cnf)
 ```
+
+### Create relationship table of CAMEO and JRC
+
+1. Setup the Cameo file locations in config.cnf
+2. Run 
+```
+cd ir-scripts
+python createCameoJRCRelation.py
+```
+
+```
+usage: createCameoJRCRelation.py [-h] [--config CONFIG]
+
+Script to load CAMEO and JRC data and find their relation and store them in a
+table.
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --config CONFIG  Location of Config File (default: ../config/config.cnf)
+```
+
+### Build the JRC and Bablenet Name Translation dataset 
+
+1. Setup the Cameo file locations in config.cnf
+2. Run 
+
+```
+cd ir-scripts
+python buildCameo_Jrc_Bablenet_NameDataset.py
+```
+* If we need to build only the JRC data :
+Edit Line 49 : to 
+```angular2html
+processComplete = processor.process(True,False)
+```
+* If we need to select a different CAMEO data set to build data
+Edit Line 49 : to 
+```angular2html
+processComplete = processor.process(False,True)
+```
+change nameTranslatorService.py
+```angular2html
+Line 49:
+cameo_data = cameo.find({"record_type": "Cameo.Phoenix.Countries.actors",
+                                     "cameo_title": "PRESIDENT_OF_THE_UNITED_STATES_"},
+                                    no_cursor_timeout=True)
+```
+
+
+```
+usage: buildCameo_Jrc_Bablenet_NameDataset.py [-h] [--config CONFIG]
+
+Script to load CAMEO and JRC data and find their relation and store them in a
+table.
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --config CONFIG  Location of Config File (default: ../config/config.cnf)
+
+```
