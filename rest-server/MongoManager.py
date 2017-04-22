@@ -45,7 +45,6 @@ class MongoManager(object):
         return True
 
     def flushBatch(self):
-        print "Flushed"
         self.collection.insert_many(self.insert_batch)
         self.batch_count = 0
         self.insert_batch = []
@@ -53,7 +52,6 @@ class MongoManager(object):
 
     def drop_collection(self):
         self.collection.drop()
-        print "Clean Up Complete"
 
     def get_collection(self):
         return self.collection

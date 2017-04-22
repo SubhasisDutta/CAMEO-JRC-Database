@@ -27,6 +27,9 @@ db.CameoJRCCountryActor=CAMEO_JRC_Relation
 db.BableNet.Cache=BableNet_Cache
 access.key=7914e95c-2716-4cce-bb47-bbdab5e43f57
 
+[NameTranslation]
+db.NameTranslation=Name_Translation
+
 [DBPedia]
 db.DBPedia.Cache=DBPedia_Cache
 
@@ -37,14 +40,15 @@ Logger.Level=DEBUG
 # Level's Available : CRITICAL,ERROR,WARNING,INFO,DEBUG
 Logger.HomeMessage=Call made to Home
 Logger.GetMessage1=Call made to Search From :
-
+Logger.GetMessage2=Call made to Filter From :
+Logger.GetMessage3=New data got for :
 
 [ServerConnection]
 Server.Port=2121
 Server.Debug=True
 WebApp.title=MultiLang API
 Webservice.Search=search
-
+Webservice.Filter=filter
 
 #General Message
 [GeneralMsg]
@@ -54,7 +58,9 @@ Licence.Ack=Bla Bla licence
 
 [AccessParameters]
 Access.QueryString=query
-
+Access.Source=source
+Access.LookupLang=lang
+Access.FilterLang=ar,es
 #Error Messages
 [ErrorMsg]
 ContentType.Unsupported=Bad Content Type

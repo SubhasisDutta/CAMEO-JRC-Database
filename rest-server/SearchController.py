@@ -12,6 +12,7 @@ import json
 from tornado.escape import json_encode
 
 from MongoManager import MongoManager
+import FormatConverterUtil
 
 logger = logging.getLogger('log.application')
 
@@ -42,42 +43,12 @@ class SearchController(tornado.web.RequestHandler):
     bablenet_cache = MongoManager(schema, bablenet_cache, batch_size, db_config).get_collection()
     dbpedia_cache = MongoManager(schema, dbpedia_cache, batch_size, db_config).get_collection()
 
-    def convertToCompareFormat(self, name):
-        compare_string = name.lower()
-        if len(compare_string) > 1:
-            tmp_str = compare_string.replace('#ACTOR#', '').lower().replace('$', '').replace('[', '').replace(']', '') \
-                .replace('_', '+').replace(' ', '+').replace('\t', '')
-            tmp_str = self.remove_text_paranthesis(tmp_str)
-            if len(tmp_str) > 2 and tmp_str[0] == '+':
-                tmp_str = tmp_str[1:]
-            elif len(tmp_str) > 2 and tmp_str[-1] == '+':
-                tmp_str = tmp_str[:-1]
-            compare_string = tmp_str
-        return compare_string
-
-    def remove_text_paranthesis(self, sentence):
-        ret = ''
-        skip1c = 0
-        skip2c = 0
-        for i in sentence:
-            if i == '[':
-                skip1c += 1
-            elif i == '(':
-                skip2c += 1
-            elif i == ']' and skip1c > 0:
-                skip1c -= 1
-            elif i == ')' and skip2c > 0:
-                skip2c -= 1
-            elif skip1c == 0 and skip2c == 0:
-                ret += i
-        return ret
-
     def get(self):
         logger.info(self.config.get('Logging', 'Logger.GetMessage1') + '' + self.request.remote_ip)
         query = self.get_argument(self.config.get('AccessParameters', 'Access.QueryString'))
         result = {}
         result['query'] = query
-        normalized_query = self.convertToCompareFormat(query)
+        normalized_query = FormatConverterUtil.convertToCompareFormat(query)
 
         # Get result from Bablenet and push to object
         conn = httplib.HTTPConnection('babelnet.io')

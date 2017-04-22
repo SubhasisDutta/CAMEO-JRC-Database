@@ -15,6 +15,7 @@ from tornado.options import define, options
 
 from HomeController import HomeController
 from SearchController import SearchController
+from FilterController import FilterController
 
 config = ConfigParser.ConfigParser()
 configPath='../config/config.cnf'
@@ -33,7 +34,8 @@ class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
             (r"/", HomeController),
-            (r"/"+config.get('ServerConnection', 'Webservice.Search'), SearchController)
+            (r"/"+config.get('ServerConnection', 'Webservice.Search'), SearchController),
+            (r"/" + config.get('ServerConnection', 'Webservice.Filter'), FilterController)
         ]
         logger.info('Handlers Set.')
         settings = dict(
