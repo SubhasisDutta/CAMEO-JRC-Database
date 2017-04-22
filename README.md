@@ -68,24 +68,26 @@ Demo Server : http://35.160.238.107:2121/
 
 Available API:
 1. Check Status :<br/>
-    <Server IP:port>/ -  Should give a response<br/>
+    ```<Server IP:port>/``` -  Should give a response<br/>
     Response:<br/>
     {"Status": "Server Running", "multilangAPI": "Welcome"}<br/>
     Ex - http://35.160.238.107:2121/
 2. Full Raw Output :<br/>
-    <Server IP:port>/search?query=<Person Name> - Returns all combined search resuls from CAMEO, JRC, BableNET and dbPedia.<br/>
-    Ex - http://35.160.238.107:2121/search?query=barrak+obama<br/>
+    ```<Server IP:port>/search?query=<Person Name>``` - Returns all combined search resuls from CAMEO, JRC, BableNET and dbPedia.<br/>
+    Ex:
+    [http://35.160.238.107:2121/search?query=barrak+obama](http://35.160.238.107:2121/search?query=barrak+obama)<br/>
 3. Filtered Output:<br/>
-    a. <Server IP:port>/filter?query=<Person Name> - Returns all the translation found for the Person in default<br/>
+    a. ```<Server IP:port>/filter?query=<Person Name>``` - Returns all the translation found for the Person in default<br/>
     (Arabic, Spanish). The derault is setup in config/config.cnf.
-    Eg: http://35.160.238.107:2121/filter?query=donald trump<br/>
-    b. <Server IP:port>/filter?query=<Person Name>&source=bablenet - Returns all person name in default language for 
+    Eg:
+    [http://35.160.238.107:2121/filter?query=donald+trump](http://35.160.238.107:2121/filter?query=donald+trump) 
+    b. ```<Server IP:port>/filter?query=<Person Name>&source=bablenet``` - Returns all person name in default language for 
     only one data source. (By default it returns from all data source. Currently support: jrc, bablenet)<br/>
-    Eg: <br/>
-    http://35.160.238.107:2121/filter?query=hillary clinton&source=jrc<br/>
-    http://35.160.238.107:2121/filter?query=hillary clinton&source=bablenet<br/>
-    c.  ```<Server IP:port>/filter?query=<Person Name>&lang=<Language Code>``` - Returns all person name in a particular language.<br/>     
-    Eg: <br/>      
+    Eg: 
+    [http://35.160.238.107:2121/filter?query=hillary+clinton&source=jrc](http://35.160.238.107:2121/filter?query=hillary+clinton&source=jrc)<br/>
+    [http://35.160.238.107:2121/filter?query=hillary+clinton&source=bablenet](http://35.160.238.107:2121/filter?query=hillary+clinton&source=bablenet)<br/>
+    c.  ```<Server IP:port>/filter?query=<Person Name>&lang=<Language Code>``` - Returns all person name in a particular language.<br/>  
+    Eg:     
     [http://35.160.238.107:2121/filter?query=donald+trump&lang=de](http://35.160.238.107:2121/filter?query=donald+trump&lang=de) (Names in German) <br/>
     [http://35.160.238.107:2121/filter?query=donald+trump&lang=ja](http://35.160.238.107:2121/filter?query=donald+trump&lang=ja) (Names in Japanese)<br/>
     [http://35.160.238.107:2121/filter?query=donald+trump&lang=hi](http://35.160.238.107:2121/filter?query=donald+trump&lang=hi) (Name in Hindi)<br/>
