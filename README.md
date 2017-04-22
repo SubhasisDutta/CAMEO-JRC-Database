@@ -90,8 +90,8 @@ Available API:
     Eg:     
     [http://35.160.238.107:2121/filter?query=donald+trump&lang=de](http://35.160.238.107:2121/filter?query=donald+trump&lang=de) (Names in German) <br/>
     [http://35.160.238.107:2121/filter?query=donald+trump&lang=ja](http://35.160.238.107:2121/filter?query=donald+trump&lang=ja) (Names in Japanese)<br/>
-    [http://35.160.238.107:2121/filter?query=donald+trump&lang=hi](http://35.160.238.107:2121/filter?query=donald+trump&lang=hi) (Name in Hindi)<br/>
-    [http://35.160.238.107:2121/filter?query=narendra+modi&lang=bn](http://35.160.238.107:2121/filter?query=narendra+modi&lang=bn) (Name in Bengali)<br/>
+    [http://35.160.238.107:2121/filter?query=donald+trump&lang=hi](http://35.160.238.107:2121/filter?query=donald+trump&lang=hi) (Names in Hindi)<br/>
+    [http://35.160.238.107:2121/filter?query=narendra+modi&lang=bn](http://35.160.238.107:2121/filter?query=narendra+modi&lang=bn) (Names in Bengali)<br/>
       
 Details to setup and run is present in [rest-server/ReadME](rest-server/)
 
