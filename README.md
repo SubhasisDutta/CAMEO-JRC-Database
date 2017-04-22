@@ -78,9 +78,9 @@ Available API:
     [http://35.160.238.107:2121/search?query=barrak+obama](http://35.160.238.107:2121/search?query=barrak+obama)<br/>
 3. Filtered Output:<br/>
     a. ```<Server IP:port>/filter?query=<Person Name>``` - Returns all the translation found for the Person in default<br/>
-    (Arabic, Spanish). The derault is setup in config/config.cnf.
+    (Arabic, Spanish). The derault is setup in config/config.cnf.<br/>
     Eg:
-    [http://35.160.238.107:2121/filter?query=donald+trump](http://35.160.238.107:2121/filter?query=donald+trump) 
+    [http://35.160.238.107:2121/filter?query=donald+trump](http://35.160.238.107:2121/filter?query=donald+trump) <br/>
     b. ```<Server IP:port>/filter?query=<Person Name>&source=bablenet``` - Returns all person name in default language for 
     only one data source. (By default it returns from all data source. Currently support: jrc, bablenet)<br/>
     Eg: 
