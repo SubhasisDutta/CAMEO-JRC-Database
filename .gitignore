@@ -94,3 +94,6 @@ data/jrcnames_uri.zip
 .idea
 bable-net
 database
+data/csv/cameo_data.csv
+data/csv/csv_data.zip
+data/csv/jrc_data.csv
