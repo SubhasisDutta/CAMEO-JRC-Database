@@ -4,3 +4,6 @@ To Try:
 2. K-Means.
 3. Logistic Regression.
 4. SMV.
+
+
+Developed by : Sneha Ramesh Neranki
